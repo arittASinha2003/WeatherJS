@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    text-align: center;
+    /*  */
+    margin: 0;
+    padding: 0;
+}
+
+.daytime {
+    background-image: url("./Day.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.nighttime {
+    background-image: url("./Night.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#weather-app {
+    margin-top: 50px;
+    padding: 20px;
+    /* background: linear-gradient(to right, #FFDAB9, #FFFFE0); */
+    /* background-color: #2e3b4e; */
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); */
+    width: 60%;
+    margin: 50px auto;
+}
+
+#weather-app h1 {
+    /* color: #333; */
+    color: white;
+}
+
+#city-input {
+    padding: 10px;
+    width: 60%;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#weather-details {
+    display: none; /* Hide initially */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out; /* Fade in effect */
+}
+
+#weather-details h2 {
+    /* color: #333; */
+    color: white;
+}
+
+.card-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center; /* Center align the text */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack the items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slide up effect */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transition effect */
+}
+
+.card h3 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card h3 i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.card p {
+    margin-bottom: 0;
+}
